@@ -1,0 +1,19 @@
+Task 1.1
+
+select * from rna where len>12 and timestamp> '2008-12-31 00:00:00' limit 1000;
+
+Task 1.2
+
+select * from rnc_rna_precomputed where is_active = TRUE and update_date < '2022-01-01' limit 1000;
+
+Task 1.3
+
+select * from rnc_rna_precomputed where rna_type in ('snoRNA', 'tRNA') and extract (year from update_date) IN (2011, 2014, 2016, 2020) limit 1000;
+
+Task 1.4
+
+select display_name from rnc_database where min_length not in (100, 200, 300, 400, 15) limit 1000;
+
+Task 1.5
+
+select region_name as myregions from rnc_sequence_regions limit 1000;
